@@ -1,0 +1,30 @@
+{
+  "name": "html-css-demos",
+  "version": "1.0.0",
+  "description": "examples to understand various html and css concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyam22/html-css-demos.git"
+  },
+  "author": "satyam bansal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyam22/html-css-demos/issues"
+  },
+  "homepage": "https://github.com/satyam22/html-css-demos#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.5"
+  }
+}
