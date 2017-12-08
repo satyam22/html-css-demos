@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/cssgriddemo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto');
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background: lightcyan;
+            }
+
+            .container {
+                background-color: rgb(199, 144, 35);
+                width: 50%;
+                height: 450px;
+                margin: 10% auto;
+                text-align: center;
+            }
+
+            .container h3 {
+                color: darkred;
+                letter-spacing: 2px;
+                font-size: 30px;
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 15px;
+                padding-top: 10px;
+            }
+
+            .wrapper {
+                display: grid;
+                text-align: center;
+                width: 80%;
+                margin: 0 auto;
+                padding-top: 0;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 80px 60px 60px 80px;
+            }
+
+            .wrapper div {
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                letter-spacing: 1px;
+                color: #666;
+                padding: 5%;
+                margin: 3px;
+                text-transform: uppercase;
+            }
+
+            .wrapper div:nth-child(1) {
+                background: lightgrey;
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+
+            .wrapper div:nth-child(2) {
+                background: lightpink;
+                grid-column: 1 / 3;
+            }
+
+            .wrapper div:nth-child(3) {
+                background: greenyellow;
+                grid-column: 3 / 5;
+            }
+
+            .wrapper div:nth-child(4) {
+                background: mediumslateblue;
+                grid-column: 1 / 3;
+            }
+
+            .wrapper div:nth-child(5) {
+                background: darksalmon;
+                grid-column: 3 / 5;
+            }
+
+            .wrapper div:nth-child(6) {
+                background: lemonchiffon;
+                grid-column: 1 / 5;
+            }
+
+            .container span{
+                text-decoration: none;
+                position:fixed;
+                bottom:0;
+                right:0;
+            }
+            .container span a{
+                text-decoration: none;
+                font-size: 15px;
+                color:black;
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h3>Why learn CSS Grid layout?</h3>
+            <div class="wrapper">
+                <div>Easier to create two dimensional layouts</div>
+                <div>Simpler markup</div>
+                <div>flexible</div>
+                <div>skip frameworks</div>
+                <div>browser support</div>
+                <div>get Amazing experience</div>
+            </div>
+            <span><i class="fa fa-copyright"></i><a href="https://github.com/satyam22"> Satyam Bansal</a></span>
+        </div>
+    </body>
+
+</html>

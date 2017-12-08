@@ -87,3 +87,6 @@ transform:rotate(-2deg,-5deg);
 .svg-container{
     perspective:1200px;
 }
+a{
+    color:#2a0845
+}
