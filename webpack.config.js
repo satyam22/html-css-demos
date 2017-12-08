@@ -1,42 +1,47 @@
-var path=require('path');
-var webpack=require('webpack');
-module.exports={
-    context:path.resolve(__dirname,'src'),
-    entry:{
-        app:'./index.js'
+var webpack = require('webpack');
+var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = {
+    context: path.resolve(__dirname, 'src'),
+    entry: {
+        app: './index.js',
+        styles: './styles/main.scss'
     },
-    output:{
-        path:path.resolve(__dirname,'dist','assets'),
-        filename:'bundle.js',
-        publicPath:'/assets'
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js'
     },
-    watch:true,
-    devServer:{
-        contentBase:path.resolve(__dirname,'public')
+    watch: true,
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public')
     },
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
-                test:/\.js$/i,
-                exclude:[/node_modules/],
-                use:[
+                test: /\.js$/i,
+                exclude: [/node_modules/],
+                use: [
                     {
-                        loader:'babel-loader',
-                        options:{presets:['env']}
+                        loader: 'babel-loader',
+                        options: { presets: ['env'] }
                     }
                 ]
             },
             {
-                test:/\.css$/i,
-                use:['style-loader','css-loader']
-            },
-            {
-                test:/\.(scss|sass)$/i,
-                use:['style-loader','css-loader','sass-loader']
+                test: /\.(s*)css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
             }
         ]
     },
-    resolve:{
-        modules:[path.resolve(__dirname,'src'),'node_modules']
-    }
+    plugins: [
+        new ExtractTextPlugin({
+
+            filename: "public/styles/demo/[name].css",
+            allChunks: true
+        })
+    ]
 }
