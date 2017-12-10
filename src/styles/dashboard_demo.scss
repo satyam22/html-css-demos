@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+*{
+    box-sizing:border-box;
+}
+body{
+    background:lightpink;
+}
+.dashboard{
+
+    display:flex;
+    width:94%;
+    height:600px;
+    margin:auto;
+    margin-top:27px;
+    align-items: stretch;
+    justify-content:flex-start;
+}
+.dashboard .sidebar{
+flex:1;
+background:rgba(3, 3, 80, 0.636);
+
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    li{
+        padding:15px;
+        border-bottom:1px solid rgba(255,255,255,0.5); 
+    }
+    li a{
+        color:white;
+        display:block;
+        text-decoration:none;
+        font-family: "Roboto",sans-serif;
+        font-size:14px;
+        letter-spacing: 1.5px;
+    }
+    li input{
+        width:80%;
+        padding:4px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    li:hover{
+        background: rgba(3, 3, 80, 0.336);
+        cursor:pointer;
+    }
+}
+}
+.dashboard .main-section{
+    flex:3;
+    background: #fff;
+    margin-left: 0;
+    margin-right:0;
+    h2{
+        color:#333;
+        margin-left:10px;
+        margin-right:10px;
+        font-weight:thick;        
+        font-size:27px;
+        padding-bottom: 2px;
+        font-family: "Roboto",sans-serif;
+        letter-spacing: 2px;
+        border-bottom:8px solid rgba(3, 3, 80, 0.636);
+    }
+    h3{
+        color:#444;
+        font-size:22px;
+        font-family:"Roboto",sans-serif;
+        font-weight:800;
+        margin:40px 25px 20px;
+        letter-spacing:0.9px;
+    }
+    .widget-container{
+        display:flex;
+        width:100%;
+        margin-top:30px;
+        justify-content: center;
+        flex-wrap:wrap;
+        .widget{
+            flex-basis:31.5%;
+            height:200px;
+            margin-right:10px;
+            margin-bottom:20px;
+            background: gray;
+            display:flex;
+            flex-direction: column;
+            .widget-header{
+                background: rgba(3, 3, 80, 0.736);
+                flex:1;
+                color:white;
+                font-family: "Roboto",sans-serif;
+                font-size:20px;
+                padding-left:16px;
+                line-height: 50px;
+                letter-spacing: 1px;
+                font-weight:500;
+            }
+            .widget-content{
+                flex:3;
+            }
+        }
+        .monitor-widget{
+            flex-basis:97%;
+            height:120px;
+
+            .widget-content{
+            margin-top:5px;
+            margin-left:10px;
+            font-size:16px;
+            letter-spacing: 0.9px;
+            .fa-circle{
+                color:rgb(12, 194, 12);
+                font-size:12px;
+            }
+            }
+        }
+
+    }
+}
