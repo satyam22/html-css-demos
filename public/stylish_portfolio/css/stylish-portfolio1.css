@@ -10,8 +10,10 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-weight:700;
 }
-.btn-xl{
-    padding:1.25rem 2.5rem;
+
+.content-section{
+    padding-top: 7.5rem;
+    padding-bottom:7.5rem;
 }
 .masthead{
     min-height:30rem;
@@ -35,6 +37,13 @@ h1,h2,h3,h4,h5,h6{
     .masthead h1{
         font-size:5.5rem;
     }
+}
+.masthead div a.btn{
+font-weight:700;
+background-color:rgb(32, 130, 160);
+}
+.masthead div a.btn:hover{
+    background-color: rgb(15, 73, 90);
 }
 #sidebar-wrapper{
 position:fixed;
@@ -109,4 +118,8 @@ border-left:1px solid rgba(255,255,255,0.5);
 }
 .menu-toggle:hover{
   background: #343a40; 
+}
+.btn-xl{
+    padding:1.25rem 2.5rem;
+    font-weight:700;
 }
