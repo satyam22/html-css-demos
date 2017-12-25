@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic");
+
+body{
+    width:100%;
+    height:100%;
+}
+*{
+    font-family: "Source Sans Pro";
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:700;
+}
+.btn-xl{
+    padding:1.25rem 2.5rem;
+}
+.masthead{
+    min-height:30rem;
+    background:linear-gradient(90deg,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.2) 100%),url("../img/bg-masthead.jpg");
+    width:100%;
+    padding-top:8rem;
+    padding-bottom:8rem;
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.masthead h1{
+    font-size:4rem;
+    margin:0;
+    padding:0;
+}
+@media(min-width:992px){
+    .masthead{
+        height:100vh;
+    }
+    .masthead h1{
+        font-size:5.5rem;
+    }
+}
+#sidebar-wrapper{
+position:fixed;
+right:0;
+z-index:2;
+width:250px;
+height:100%;
+-moz-transition: all 0.4s ease 0s;
+-webkit-transition: all 0.4s ease 0s;
+-ms-transition:all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+background-color: #1D809F;
+transform:translateX(250px);
+border-left:1px solid rgba(255,255,255,0.5);
+}
+.sidebar-nav{
+    position:absolute;
+    top:0;
+    width:250px;
+    margin:0;
+    padding:0;
+}
+#sidebar-wrapper .sidebar-nav li{
+    list-style-type: none;
+    width:100%;
+}
+#sidebar-wrapper .sidebar-nav a{
+    text-decoration: none;
+    display:block;
+    color:white;
+    padding:15px;
+}
+.sidebar-nav li a:hover{
+    background: rgba(255,255,255,0.2);
+}
+.sidebar-nav .sidebar-brand{
+    background: rgba(52,58,64,0.1);
+    font-size:1.2rem;
+    height:80px;
+    line-height:20px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:15px;    
+}
+.sidebar-nav .sidebar-brand a:hover{
+    background: none;
+}
+#sidebar-wrapper.active{
+    right:250px;
+    width:250px;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -ms-transition:all 0.4s ease 0s;
+    transition:all 0.4s ease 0s;
+}
+.menu-toggle{
+    position:fixed;
+    top:15px;
+    right:15px;
+    width:50px;
+    height:50px;
+    color:white;
+    z-index:999;
+    background: rgba(52,58,64,0.5);
+    text-align: center;
+    line-height: 50px;
+}
+.menu-toggle:focus, .menu-toggle:hover{
+    color:white;
+}
+.menu-toggle:hover{
+  background: #343a40; 
+}
