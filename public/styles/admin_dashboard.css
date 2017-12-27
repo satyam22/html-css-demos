@@ -1,9 +1,18 @@
 .navbar{
     height:40px;
+    margin-top:0;
+    border:0 !important;
+}
+.navbar-top-links{
+    margin-top:0;
 }
 .navbar-top-links li{
     list-style-type:none;
-    display:inline-block;
+    display:inline-block;    
+}
+.navbar-top-links li:hover{
+    background: #ccc;
+    
 }
 .navbar-top-links > li> a{
     padding:15px;
