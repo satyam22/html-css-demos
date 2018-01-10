@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="en" http-equiv="Content-Language">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="security" content="public">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="IBM.Country" content="US">
+    <meta name="DC.Publisher" content="IBM Corporation">
+    <meta name="DC.Language" content="en">
+    <meta name="DC.creator" content="Administrator">
+    <meta name="DC.rights" content="&copy; Copyright IBM Corporation 2018">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui">
+
+    <title>Me Homes - ME</title>
+
+    <link rel="shortcut icon" href="/AppBuilder/favicon.ico">
+
+    <!--[if IE 8]>
+    <link href="/AppBuilder/assets/ie8-c419efd37b1121fb4e970edd4eea46c7.css" media="screen" rel="stylesheet" />
+  <![endif]-->
+    <link href="/AppBuilder/assets/application-0fdf99658f12144b201ebbcb8ba473bc.css" media="screen" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+    <script src="/AppBuilder/assets/html5-f0de7782a3c4be5db82bfcccf5640d48.js"></script>
+  <![endif]-->
+    <script src="/AppBuilder/assets/application-cc8fc615e1a8a40fb9167cb97d810292.js"></script>
+
+    <style type="text/css">
+      body {
+        width: 100%;
+      }
+
+      .navigation ul li a {
+        background: #e3e1e1;
+        color: #000;
+        padding: 10px 15px !important;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-right: 13px;
+        font-size: 15px;
+        margin-top: 10px;
+        font-weight: bold;
+
+      }
+
+      .navigation ul li a:hover {
+        background: #e3e1e1;
+        color: #000;
+        padding: 10px 15px !important;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-right: 13px;
+        border-bottom: 0px solid red;
+      }
+
+      #navigation,
+      .navigation {
+        background: #f2f2f2;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.0) !important;
+        -moz-box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.0) !important;
+        box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.0) !important;
+      }
+
+      .navigation ul {
+        /*border-bottom: 1px solid #4178be !important;*/
+        padding-left: 11px;
+      }
+
+      #navigation {
+        background: #f2f2f2;
+
+      }
+
+      #content,
+      #wrapper {
+        background: #fff;
+      }
+
+      .widget {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(65, 119, 190, 0.17);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(65, 119, 190, 0.17);
+        box-shadow: 0px 0px 5px 0px rgba(65, 119, 190, 0.17);
+      }
+
+      input[type='button'] {
+        float: right;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .Logout_widget {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.17);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.17);
+        box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.17);
+      }
+
+
+      .icon_admin_user {
+        display: none
+      }
+
+      input[type='submit'] {
+        background-color: #337ab7 !important;
+        border: 0px;
+        color: #fff !important;
+        padding: 8px !important;
+        display: block;
+        float: right;
+        font-weight: normal;
+      }
+
+      input[type='submit']:hover {
+        background-color: #428bca;
+      }
+
+      .pg3-normal {
+        background: #337ab7 !important;
+        border: 0px;
+        color: #fff !important;
+        padding: 5px 10px !important;
+        font-size: 12px !important;
+      }
+
+      .pg3-selected {
+        background: #333 !important;
+        border: 0px;
+        color: #fff !important;
+        padding: 5px 10px !important;
+        font-size: 12px !important;
+      }
+
+      #header {
+        background: #4b4b4b;
+        min-height: 80px !important;
+        padding-top: 8px;
+      }
+
+      .widget header {
+        padding: 10px 17px;
+        border-bottom: 1px solid #e3e1e1;
+        background: #f2f2f2;
+        color: #4178be;
+      }
+
+      .widget .minimize {
+        left: -4px;
+        top: 0px;
+      }
+
+      .widget .minimize,
+      .widget .restore {
+        color: #000
+      }
+
+      #header_links {
+        display: none;
+      }
+
+      .widget .widget_inside {
+        padding: 15px 15px !important;
+        color: #4d4d4d !important
+      }
+
+      #breadcrumbs ul .current {
+        color: #333;
+        max-width: 20em;
+        font-size: 16px;
+        display: none;
+      }
+
+      .widget_inside p {
+        margin: 0px;
+        padding: 12px;
+        line-height: 16px;
+        border-bottom: 1px dashed #a4cbf3;
+      }
+
+      .widget_inside p:last-child {
+        border-bottom: 0px dashed #a4cbf3 !important;
+        padding-bottom: 0px !important;
+      }
+
+      .widget_inside h3 p {
+        border: 0px;
+      }
+
+      .widget_inside h3 {
+        float: left;
+        /*margin-top: 10px;*/
+      }
+
+      .navigation ul li.selected a {
+        color: #4178be;
+        background: #fff;
+        border-top: 0px solid #4178be !important;
+        border-bottom: 1px solid #fff;
+        border-left: 0px solid #4178be !important;
+        border-right: 0px solid #4178be !important;
+        margin-bottom: -1px;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(65, 119, 190, 0.24);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(65, 119, 190, 0.24);
+        box-shadow: 0px 0px 12px 0px rgba(65, 119, 190, 0.24);
+
+      }
+
+      .chrome_widget.logo img {
+        max-width: 320px !important;
+        max-height: 74px !important;
+      }
+
+      .chrome_widget.logo {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.17);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.17);
+        box-shadow: 0px 0px 0px 0px rgba(65, 119, 190, 0.17);
+      }
+
+      .edit_mode #edit_page_container {
+        display: none;
+      }
+
+      input[type='file'] {
+        background: #4178be;
+        border: 0px;
+        color: #fff;
+        padding: 10px;
+        -webkit-appearance: none;
+        display: block;
+        margin: 10px 0px;
+        float: right;
+      }
+
+
+      .upload-jd {
+        font-weight: bold;
+        color: #333
+      }
+
+
+      .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        -opacity: 0;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+
+      .inputfile+label {
+        font-size: 14px;
+        font-weight: normal;
+        color: white;
+        background-color: #337ab7;
+        padding: 10px;
+        float: right;
+        margin-bottom: 15px;
+      }
+
+      .inputfile:focus+label,
+      .inputfile+label:hover {
+        background-color: #428bca;
+      }
+
+      /*2nd tab*/
+
+      #breadcrumbs {
+        font-size: 0px;
+        /* padding-bottom: 15px; */
+        width: auto;
+        text-indent: 999px;
+        margin-top: -18px;
+      }
+
+      footer {
+        background: #b6b6b6;
+        padding-bottom: 0px;
+      }
+
+      footer a {
+        color: #fff
+      }
+
+      .powered-persistent {}
+
+      .department_update {
+        width: 900px;
+      }
+
+      .my_workspace {
+        width: 300px;
+        margin-left: 10px !important;
+      }
+    </style>
+    </style>
+
+    <meta content="/AppBuilder/entities/render_event_response?source=search_box&amp;type=autocomplete" name="autocomplete-search-path">
+    <meta content="/AppBuilder/entities/render_event_response?source=search_box&amp;type=tag_autocomplete" name="tag-autocomplete-search-path">
+    <meta content="/AppBuilder/entities/render_event_response?source=search_results&amp;type=tag" name="tag-search-path">
+    <meta content="/AppBuilder/spaces/search" name="search-spaces-path">
+    <meta content="/AppBuilder/spaces/add_to" name="add-to-spaces-path">
+    <meta content="/AppBuilder/widgets" name="widgets-path">
+    <meta content="me_home" name="controller-name-or-entity-type">
+    <meta content="index" name="action-name">
+
+    <meta content="data-explorer-admin" name="user-id">
+    <meta content="true" name="is-user-admin">
+
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="PHmyYhpy6ricNko7+b82KtjiPz1PBLPgl144RhzZZQI=" name="csrf-token" />
+
+
+
+  </head>
+
+  <body class="me_home">
+    <section id="mobile_navigation" class="clearfix" aria-hidden="true">
+      <section class="container_12">
+        <section class="grid_12">
+          <nav role="navigation" aria-label="mobile">
+            <ul>
+              <li class="button_header ">
+                <a href="/AppBuilder/SearchProfiles" title="Search Profiles">Search Profiles</a>
+                <li class="button_header ">
+                  <a href="/AppBuilder/ResumeScan" title="Resume Scan">Resume Scan</a>
+                  <li class="button_header selected">
+                    <a href="/AppBuilder/me_home" title="Me Home">Me Home</a>
+                  </li>
+            </ul>
+          </nav>
+
+        </section>
+      </section>
+    </section>
+
+
+    <div id="wrapper">
+      <header id="header" role="banner" aria-label="page header">
+        <div id="masthead">
+          <a href="#content" id="skip_to_content" title="Skip to content">Skip to content</a>
+          <section class="header main container_12 layout_3_3_6">
+            <div class="row">
+              <section class="grid_3 column">
+                <a href="#" id="toggle_mobile_navigation" title="Toggle mobile navigation">
+                  &#9776;
+                </a>
+                <section aria-label=" region" aria-labelledby="logo_header" class="widget logo logo chrome_widget" data-based-on="logo" data-widget-id="logo"
+                  role="region">
+                  <a href="/AppBuilder/">
+                    <img alt="Logo" src="/AppBuilder/images/logo" />
+                  </a>
+                </section>
+              </section>
+              <section class="grid_3 column">
+                <div id="header_links">
+                  <div class="menu_container">
+                    <ul id="admin_menu" class="dropdown" aria-label="data-explorer-admin's admin menu" aria-hidden="true">
+                      <li>
+                        <div class="switch">
+                          <input aria-controls="edit_page_container" aria-label="Show edit links checkbox" id="edit_mode_switch" name="edit_mode_switch"
+                            type="checkbox">
+                          <label for="edit_mode_switch">
+                            <span class="label_text">Show edit links:</span>
+                            <span class="switch_wrapper ">
+                              <span class="switch_content">
+                                <span class="on">on</span>
+                                <span class="flipper"></span>
+                                <span class="off">off</span>
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+
+                      </li>
+                      <li>
+                        <a href="/AppBuilder/admin" target="_blank">Manage application</a>
+                      </li>
+                      <li>
+                        <h2 id="quick_links_header">Quick links</h2>
+                        <ul aria-labelledby="quick_links_header">
+                          <li>
+                            <a href="/AppBuilder/admin/settings/display_options#custom_css" target="_blank">Custom CSS</a>
+                          </li>
+                          <li>
+                            <a href="/AppBuilder/admin/settings/display_options#custom_java
+  script" target="_blank">Custom JavaScript</a>
+                          </li>
+                          <li>
+                            <a href="/AppBuilder/admin/settings/display_options#custom_head" target="_blank">Custom Head Tag</a>
+                          </li>
+                          <li>
+                            <a href="/AppBuilder/admin/layouts/header%23show" target="_blank">Header Layout</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <button value="Toggle admin menu" id="current_admin_user" class="icon_admin_user" aria-haspopup="true" aria-owns="admin_menu"
+                      aria-controls="admin_menu">
+                      <span class="hide_absolutely">Toggle admin menu</span>
+                    </button>
+                  </div>
+
+                  <div class="menu_container">
+                    <ul id="user_menu" class="dropdown" aria-label="data-explorer-admin's user menu" aria-hidden="true">
+                      <li class="user_name">
+                        data-explorer-admin
+                      </li>
+                      <li>
+                        <a aria-label="my profile" href="/AppBuilder/user/data-explorer-admin" title="My profile">My profile</a>
+                      </li>
+                      <li>
+                        <a aria-label="help" href="/AppBuilder/help" title="Help">Help</a>
+                      </li>
+                    </ul>
+
+                    <button value="Toggle user menu" id="current_user" class="icon_user" aria-haspopup="true" aria-owns="user_menu" aria-controls="user_menu">
+                      <span class="hide_absolutely">Toggle user menu</span>
+                    </button>
+                  </div>
+
+                </div>
+                <section aria-label="Logout widget region" aria-labelledby="Logout_widget_header" class="widget Logout_widget erb chrome_widget"
+                  data-based-on="erb" data-widget-id="Logout_widget" role="region">
+
+                  <div class="widget_inside">
+                    <script type="text/javascript">
+                      function routeToLogin() {
+
+                        //alert("I am in Logout function... ");
+                        //window.location.href = "http://hdd11004.persistent.co.in/AppBuilder/j_security_check?j_username=data-explorer-admin&j_password=TH1nk1710";
+
+                        window.location.href = "http://hdd23623.persistent.co.in:8080/AppBuildr/login.html";
+
+                        //window.close();
+
+                        //<a href="http://ps8678.persistent.co.in:8080/FileReadApp/home.html"/a>
+
+                      }
+                    </script>
+                    <input type="button" name="Logout" value="Logout" onclick="routeToLogin()" />
+                  </div>
+                </section>
+              </section>
+              <section class="grid_6 column"></section>
+            </div>
+          </section>
+        </div>
+      </header>
+
+      <script>
+        //<![CDATA[
+
+        (function ($) {
+          var $wrapper = $("#wrapper"),
+            $mobile_navigation = $("#mobile_navigation"),
+            $animation_elements = [
+              $("#toggle_mobile_navigation"),
+              $mobile_navigation,
+              $wrapper
+            ],
+            mobile_toggle_class = "reveal_navigation",
+            is_touch_device = 'ontouchstart' in document.documentElement,
+            event_type = is_touch_device ? "touchstart" : "click";
+
+          $("#toggle_mobile_navigation").on(event_type, function (e) {
+            e.preventDefault();
+
+            if ($wrapper.hasClass(mobile_toggle_class)) {
+              $.each($animation_elements, function (el) {
+                $(this).removeClass(mobile_toggle_class);
+                $mobile_navigation.attr("aria-hidden", true);
+              });
+            } else {
+              $.each($animation_elements, function (el) {
+                $(this).addClass(mobile_toggle_class);
+                $mobile_navigation
+                  .attr("aria-hidden", false)
+                  .find("nav li:first-child > a").focus();
+              });
+            }
+          });
+        })(jQuery);
+
+//]]>
+      </script>
+
+      <section id="navigation" class="clearfix">
+        <section class="container_12">
+          <section class="grid_12">
+            <section aria-label=" region" aria-labelledby="navigation_header" class="widget navigation navigation " data-based-on="navigation"
+              data-widget-id="navigation" role="region">
+              <nav role="navigation" aria-label="main">
+                <ul>
+                  <li class="button_header ">
+                    <a href="/AppBuilder/SearchProfiles" title="Search Profiles">Search Profiles</a>
+                    <li class="button_header ">
+                      <a href="/AppBuilder/ResumeScan" title="Resume Scan">Resume Scan</a>
+                      <li class="button_header selected">
+                        <a href="/AppBuilder/me_home" title="Me Home">Me Home</a>
+                      </li>
+                </ul>
+              </nav>
+
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section role="main" id="content" class="main container_12">
+        <div class="row">
+          <section id="breadcrumbs" class="clearfix grid_12 ellipsis">
+            <ul>
+              <li class="me_home current ellipsis">
+                <span title="Me Homes">Me Homes</span>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+        <div id="flash_notices">
+          <noscript>
+            <div class="error">This application requires JavaScript but it is not available.</div>
+          </noscript>
+        </div>
+
+
+
+        <div role="region" id="edit_page_container" data-with-breadcrumbs="true">
+          <a href="/AppBuilder/admin/layouts/me_home%23index" target="_blank" title="Edit &#39;entities&#39; page">Edit page</a>
+        </div>
+
+
+        <div class="row">
+          <section class="grid_3 column ui-sortable-disabled">
+            <section aria-label="my workspace region" aria-labelledby="my_workspace_header" class="widget my_workspace erb "
+              data-based-on="erb" data-widget-id="my_workspace" role="region">
+              <header class="">
+                <div class="header_actions">
+                  <a class="editable widget_header_action_link countable" href="/AppBuilder/admin/widgets/my_workspace" tabindex="0"
+                    target="_blank" title="Edit &#39;my_workspace&#39; widget">Edit</a>
+
+                  <button class="widget_remove widget_header_action_button" title="remove widget" value="remove widget">×</button>
+                </div>
+                <h2 class="next_to_1" id="my_workspace_header">
+                  <button class="restore widget_header_action_button icon" title="restore widget" value="restore widget">&#xe611;</button>
+                  <button class="minimize widget_header_action_button icon" title="minimize widget" value="minimize widget">&#xe610;</button>My/All Workspaces</h2>
+              </header>
+              <div class="widget_inside">
+                <h1>my workspace</h1>
+              </div>
+            </section>
+          </section>
+          <section class="grid_9 column ui-sortable-disabled">
+            <section aria-label="department update region" aria-labelledby="department_update_header" class="widget department_update erb "
+              data-based-on="erb" data-widget-id="department_update" role="region">
+              <header class="">
+                <div class="header_actions">
+                  <a class="editable widget_header_action_link countable" href="/AppBuilder/admin/widgets/department_update"
+                    tabindex="0" target="_blank" title="Edit &#39;department_update&#39; widget">Edit</a>
+
+                  <button class="widget_remove widget_header_action_button" title="remove widget" value="remove widget">×</button>
+                </div>
+                <h2 class="next_to_1" id="department_update_header">
+                  <button class="restore widget_header_action_button icon" title="restore widget" value="restore widget">&#xe611;</button>
+                  <button class="minimize widget_header_action_button icon" title="minimize widget" value="minimize widget">&#xe610;</button>ALL MATTERS</h2>
+              </header>
+              <div class="widget_inside">
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+                <style>
+                  * {
+                    box-sizing: border-box;
+                  }
+
+                  a {
+                    text-decoration: none;
+                    color: rgb(107, 175, 235);
+                  }
+
+                  a:hover,
+                  a:focus {
+                    text-decoration: none;
+                  }
+
+                  .all-matters {
+                    border: 1px solid #ddd;
+                  }
+
+                  .matter-search-wrapper {
+                    position: relative;
+                  }
+
+                  .matter-filter-search {
+                    width: 200px !important;
+                    font-size: 18px;
+                    margin: 8px;
+                    height: 35px;
+                    border: 1px solid #ddd;
+                    color: #eee;
+                  }
+
+                  td {
+                    padding: 10px;
+                  }
+
+                  .all-matters .header {
+                    background-color: #eee;
+                  }
+
+                  .all-matters .header button {
+                    float: right;
+                    background: rgb(107, 175, 235);
+                    color: white;
+                    height: 35px;
+                    margin: 8px;
+                    border: none !important;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                  }
+
+                  .matters-table {
+                    width: 90%;
+                    margin: auto;
+                    text-align: center;
+                  }
+
+                  .matters-table th .fa-angle-down {
+                    color: black;
+                    font-size: 24px;
+                    font-weight: bold;
+                  }
+
+                  .matters-table .checkbox {
+                    margin-right: 20px;
+                    background: white !important;
+                    color: white;
+                  }
+
+                  .matters-table th {
+                    border-bottom: 1px solid rgb(231, 224, 224);
+                    padding-bottom: 15px;
+                    border-collapse: collapse;
+                  }
+
+                  .footer {
+                    height: 51px;
+                    background: #eee;
+                  }
+                </style>
+
+
+                <div class="all-matters">
+                  <div class="header">
+                    <input type="text" placeholder="  &#xF002; Filter" class="matter-filter-search" style="font-family:Arial, FontAwesome">
+                    <button type="button">Add To Workspace</button>
+                  </div>
+                  <table class="matters-table">
+                    <tr>
+                      <th>Number &nbsp;
+                        <a type="button" href="#">
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </th>
+                      <th>Applicant Name &nbsp;
+                        <a type="button" href="#">
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </th>
+                      <th>Country Of Reference &nbsp;
+                        <a type="button" href="#">
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </th>
+                      <th>Court Reference &nbsp;
+                        <a type="button" href="#">
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </th>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="dummy" class="checkbox">
+                        <a href="#">26414067</a>
+                      </td>
+                      <td>Satyam Bansal</td>
+                      <td>India</td>
+                      <td>
+                        <a href="#">201-05012018</a>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="footer">
+
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <script>
+          //<![CDATA[
+          var layout = [["my_workspace"], ["department_update"]];
+//]]>
+        </script>
+      </section>
+
+      <footer role="contentinfo">
+        <div class="row container_12">
+          <section class="menu column">
+
+            <nav role="navigation" aria-label="footer">
+              <ul>
+                <li class="button_header ">
+                  <a href="/AppBuilder/SearchProfiles" title="Search Profiles">Search Profiles</a>
+                  <li class="button_header ">
+                    <a href="/AppBuilder/ResumeScan" title="Resume Scan">Resume Scan</a>
+                    <li class="button_header selected">
+                      <a href="/AppBuilder/me_home" title="Me Home">Me Home</a>
+                    </li>
+              </ul>
+            </nav>
+
+          </section>
+        </div>
+      </footer>
+
+
+    </div>
+
+    <div role="alertdialog" class="dialog confirmation centered" id="reset_page_layout_dialog" aria-labelledby="dialog_row_title"
+      aria-describedby="dialog_row_description">
+      <h3 id="dialog_row_title">Reset to Default</h3>
+      <p id="dialog_row_description">
+        <span class="confirmation">Are you sure you want to reset the page layout to default?</span>
+      </p>
+      <span class="controls">
+        <a class="button dialog_confirm" href="#" title="Reset page layout to default">Reset</a>
+        <a class="cancel_dialog cancel" href="#" title="Cancel operation">Cancel</a>
+      </span>
+    </div>
+
+    <div role="dialog" tabindex="-1" class="dialog action centered" id="create_space_dialog" aria-labelledby="space_dialog_row_title">
+      <div id="space-dialog-notices"></div>
+      <h3 id="space_dialog_row_title">Create new space</h3>
+      <p id="create_space_disclaimer">
+        You cannot change the name or privacy setting after the space has been created.
+      </p>
+      <form accept-charset="UTF-8" action="/AppBuilder/spaces" data-remote="true" method="post">
+        <div style="display:none">
+          <input name="utf8" type="hidden" value="&#x2713;" />
+        </div>
+        <input aria-describedby="create_space_disclaimer" aria-label="enter space name" autocomplete="off" id="create_space_title"
+          name="title" placeholder="Enter space name" type="text" />
+        <input id="privacy_level" name="privacy_level" type="hidden" value="private" />
+
+        <div class="toggle_choice">
+          <div class="choice_container">
+
+            <span role="button" class="private choice" aria-label="Private space" aria-describedby="create_space_disclaimer" data-privacy-level="private"
+              aria-controls="toggle_choice_result privacy_level" aria-pressed="true">
+              <i class="icon_lock"></i>Private</span>
+            <span role="button" class="public choice" aria-label="Public space" aria-describedby="create_space_disclaimer" data-privacy-level="public"
+              aria-controls="toggle_choice_result privacy_level" aria-pressed="false">Public</span>
+          </div>
+          <span id="toggle_choice_result" aria-live="polite">
+            This space is
+            <strong>private</strong>.</span>
+        </div>
+
+        <span class="controls">
+          <input class="submit" data-disable-with="Creating..." name="commit" type="submit" value="Create" />
+          <a class="cancel" href="#" title="Cancel operation">Cancel</a>
+        </span>
+      </form>
+    </div>
+
+    <script>
+      //<![CDATA[
+
+      (function ($) {
+
+        function is_ie8() {
+          return $("html").hasClass("ie8");
+        }
+
+        if (is_ie8()) {
+          $(".private.choice").addClass("ie8");
+        }
+
+        $(".toggle_choice .choice").on("click", function (event) {
+          var $choice = $(this),
+            $choice_label = $("#toggle_choice_result > strong"),
+            $hidden_choice = $("#privacy_level"),
+            choice_text = $choice.attr("data-privacy-level");
+
+          $choice
+            .attr("aria-pressed", "true")
+            .siblings()
+            .attr("aria-pressed", "false");
+
+          $choice_label.text(choice_text);
+          $hidden_choice.val(choice_text);
+
+          if (is_ie8()) {
+            var deselected_color = "#999999",
+              selected_color = "#e2e2e2";
+
+            $choice
+              .css("color", selected_color)
+              .siblings()
+              .css("color", deselected_color);
+          }
+        });
+      })(jQuery);
+
+//]]>
+    </script>
+
+
+    <div class="overlay"></div>
+    <div id="announcer" aria-live="assertive"></div>
+    <script>
+      //<![CDATA[
+      $(document).ready(function () {
+        $("footer").append("<div class='powered-persistent'>Powered by Persistent</div>");
+        //alert('footer');
+
+      });
+//]]>
+    </script>
+  </body>
+
+</html>
