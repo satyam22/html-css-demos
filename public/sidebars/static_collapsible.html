@@ -1,0 +1,65 @@
+<html !DOCTYPE>
+
+    <head>
+        <title>Bootstrap 3 Collapsible Sidebar</title>
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/static_collapsible.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Collapsible Sidebar</h3>
+                </div>
+                <ul class="list-unstyled">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">CDE</a>
+                    </li>
+                    <li>
+                        <a href="#">EDF</a>
+                    </li>
+                    <li>
+                        <a href="#homeSubMenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                        <ul class="collapse list-unstyled" id="homeSubMenu">
+                            <li>
+                                <a href="#">Page1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page3</a>
+                            </li>
+                            <li>
+                                <a href="#">Page4</a>
+                            </li>
+                        </ul>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <div class="top-header">
+                    <button type="button" class="btn-info" id="toggleSidebar">
+                        <i class="glyphicon glyphicon-align-left"></i>Toggle Sidebar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/static_collapsible.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
